@@ -10,6 +10,9 @@
      4. [Results](#results)
         1. [Results with Default Conditions](#Results-with-Default-Conditions)
         2. [Hyperparameter Tuning](#hyperparameter-tuning)
+  2. [Crop Monitoring](#Crop-Monitoring)
+     1. [Components](#components)
+     2. [Hardware Configuration](#hardware-configuration)
 ## Outcome
 This project outcomes includes a single mobile application with crop disease detection, crop monitoring and farming recommendations.
 * Farmer can take a picture of unhealthy leaf and app would detect the disease of the leaf.
@@ -91,6 +94,7 @@ for most of the models. DenseNet201 achieved an outstanding accuracy of 99.04%
 at the 50th epoch. But the accuracy didn’t keep on increasing with the increase of
 epochs. The accuracy of the models became almost stable by 50 epoch. So, 50 epochs would be the ideal value for attaining the best performance from all the models.
 ![Epoch Tuning](images/tuning1.png)
+
 From previous experiments, it can be observed that DenseNet201, ResNet152V2
 and MobileNetV2 performed better than other models. So, for the batch size experiment only these three models are used for experimentation. Batch size is the
 number of training samples considered in one iteration. In this experiment, batch size was set to 16, 32 and 64 for DenseNet201, ResNet152V2 and MobileNetV2
@@ -107,3 +111,36 @@ that consume less memory and less computation which lead to lesser training time
 MobileNetV2 model size is very small which is extremely handy for mobile devices. Training time can be made even quicker by choosing an epoch of
 30 which gives slightly lower accuracy but in a faster time.
 ![Batch Size Tuning](images/tuning2.png)
+### Crop Monitoring
+The work completed in the crop monitoring is all the sensors are integrated with the
+Arduino and the sensor’s data is transmitted from the Arduino with the help of LoRa
+transmitter. The transmitted data is received by the LoRa receiver and the received data
+is sent to the NodeMCU which again sends the data to the cloud.
+#### Components
+The following hardware components are used for the crop monitoring:
+• Soil Moisture Sensor
+• DHT-11 Sensor
+• Rain Sensor
+• Motion Sensor (PIR)
+• Submersible water pump
+• Relay
+• Speaker
+• LED
+• 9v Battery
+• Jumper wires
+• Arduino Uno
+• LoRa Module
+• Wi-Fi Module
+#### Hardware Configuration
+Appropriate sensors were used for
+soil moisture, rain, motion, temperature and humidity measurements. Then the sensors
+were integrated with the Arduino and integrate all these sensors with the Arduino Board.
+Then the Arduino board transmits the sensor data to the LoRa transmitter. The LoRa
+transmitter transmits the information to the LoRa receiver which in turn sends the data to
+the cloud through Wi-FI module. The overall architecture of crop monitoring is shown below.
+![Architecture](images/method.png)
+
+The below figures shows the schematic diagrams of the Transmitter and Receiver
+side respectively.
+![Transmitter](images/all.png)
+![Receiver](images/lora.png)
