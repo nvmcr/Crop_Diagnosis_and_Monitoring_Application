@@ -3,18 +3,18 @@
 1. [Outcome](#outcome)
 2. [Motivation](#motivation)
 3. [Methodology](#methodology)
-  1. [Crop Diagnosis](#crop-diagnosis)
-     1. [Data Acquisition](#data-acquisition)
-     2. [Data Preparation](#data-preparation)
-     3. [Diagnosis](#diagnosis)
-     4. [Results](#results)
-        1. [Results with Default Conditions](#Results-with-Default-Conditions)
-        2. [Hyperparameter Tuning](#hyperparameter-tuning)
-  2. [Crop Monitoring](#Crop-Monitoring)
-     1. [Components](#components)
-     2. [Hardware Configuration](#hardware-configuration)
-  3. [Recommendation](#Recommendation)
-  4. [Mobile Application](#Mobile-Application)
+    1. [Crop Diagnosis](#crop-diagnosis)
+       1. [Data Acquisition](#data-acquisition)
+       2. [Data Preparation](#data-preparation)
+       3. [Diagnosis](#diagnosis)
+       4. [Results](#results)
+          1. [Results with Default Conditions](#Results-with-Default-Conditions)
+          2. [Hyperparameter Tuning](#hyperparameter-tuning)
+    2. [Crop Monitoring](#Crop-Monitoring)
+       1. [Components](#components)
+       2. [Hardware Configuration](#hardware-configuration)
+    3. [Recommendation](#Recommendation)
+    4. [Mobile Application](#Mobile-Application)
 4. [Conclusion](#conclusion)
 ## Outcome
 This project outcomes includes a single mobile application with crop disease detection, crop monitoring and farming recommendations.
@@ -151,8 +151,10 @@ side respectively.
 This [link](https://github.com/7NNS7/Recommendation-System-for-Farming) should provide the necessary code and info.
 ### Mobile Application
 Partial flowchart of the application built is shown below.
+
 ![Flowchart](images/app.png)
 Below are the snapshots of different pages in application.
+
 ![Login](images/app1.png)
 ![Home Page](images/app2.png)
 ![Weather](images/app3.png)
