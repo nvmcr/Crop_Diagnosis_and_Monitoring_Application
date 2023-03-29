@@ -153,9 +153,11 @@ This [link](https://github.com/7NNS7/Recommendation-System-for-Farming) should p
 Partial flowchart of the application built is shown below.
 
 ![Flowchart](images/app.png)
+
 Below are the snapshots of different pages in application.
 
 ![Login](images/app1.png)
+
 ![Home Page](images/app2.png)
 ![Weather](images/app3.png)
 ![Monitoring](images/app4.png)
