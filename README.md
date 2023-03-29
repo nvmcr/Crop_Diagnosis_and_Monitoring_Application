@@ -9,6 +9,7 @@
      3. [Diagnosis](#diagnosis)
      4. [Results](#results)
         1. [Results with Default Conditions](#Results-with-Default-Conditions)
+        2. [Hyperparameter Tuning](#hyperparameter-tuning)
 ## Outcome
 This project outcomes includes a single mobile application with crop disease detection, crop monitoring and farming recommendations.
 * Farmer can take a picture of unhealthy leaf and app would detect the disease of the leaf.
@@ -80,3 +81,29 @@ exceptionally well with a loss of 0.1524 but can only attain an accuracy of 95.6
 ![Loss](images/defloss.png)
 ![AUC](images/defaoc.png)
 ![Table](images/deftable.png)
+##### Hyperparameter Tuning
+To examine the effect of the number of epochs in model performance, all models
+are trained for 10, 30 and 50 epochs respectively. Except for the number of epochs,
+remaining all parameters were set the same as in default conditions. The results of
+the experiments on epochs can be seen in below Table. It can be explicitly seen that an
+increase in the number of epochs is significantly improving the model performance
+for most of the models. DenseNet201 achieved an outstanding accuracy of 99.04%
+at the 50th epoch. But the accuracy didn’t keep on increasing with the increase of
+epochs. The accuracy of the models became almost stable by 50 epoch. So, 50 epochs would be the ideal value for attaining the best performance from all the models.
+![Epoch Tuning](images/tuning1.png)
+From previous experiments, it can be observed that DenseNet201, ResNet152V2
+and MobileNetV2 performed better than other models. So, for the batch size experiment only these three models are used for experimentation. Batch size is the
+number of training samples considered in one iteration. In this experiment, batch size was set to 16, 32 and 64 for DenseNet201, ResNet152V2 and MobileNetV2
+models. The number of epochs set for all the models is 50. Except for the batch
+size and epoch, remaining all parameters were set the same as in default conditions.
+Below Table shows the results of the used CNN models. As shown, an increase in batch
+size is not improving the corresponding model’s performance. As a higher batch size
+consumes more memory and needs high computational power, a lower batch size of
+16 is desirable.
+The best accuracy of 99.06% is attained by DenseNet201 with a batch size of 16.
+Even ResNet152V2 got a good accuracy of 98.5% but it requires more computation and training time due to a large number of parameters. MobileNetV2 also
+achieved a high accuracy of 98.19%. Moreover, MobileNetV2 has lesser parameters
+that consume less memory and less computation which lead to lesser training time.
+MobileNetV2 model size is very small which is extremely handy for mobile devices. Training time can be made even quicker by choosing an epoch of
+30 which gives slightly lower accuracy but in a faster time.
+![Batch Size Tuning](images/tuning2.png)
