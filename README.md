@@ -8,7 +8,7 @@
     2. [Data Preparation](#data-preparation)
     3. [Diagnosis](#diagnosis)
     4. [Results](#results)
-      1. [Results with Default Conditions](#Results-with-Default-Conditions)
+        1. [Results with Default Conditions](#Results-with-Default-Conditions)
 ## Outcome
 This project outcomes includes a single mobile application with crop disease detection, crop monitoring and farming recommendations.
 * Farmer can take a picture of unhealthy leaf and app would detect the disease of the leaf.
