@@ -15,6 +15,7 @@
      2. [Hardware Configuration](#hardware-configuration)
   3. [Recommendation](#Recommendation)
   4. [Mobile Application](#Mobile-Application)
+4. [Conclusion](#conclusion)
 ## Outcome
 This project outcomes includes a single mobile application with crop disease detection, crop monitoring and farming recommendations.
 * Farmer can take a picture of unhealthy leaf and app would detect the disease of the leaf.
