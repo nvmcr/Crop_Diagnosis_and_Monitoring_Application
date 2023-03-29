@@ -13,6 +13,8 @@
   2. [Crop Monitoring](#Crop-Monitoring)
      1. [Components](#components)
      2. [Hardware Configuration](#hardware-configuration)
+  3. [Recommendation](#Recommendation)
+  4. [Mobile Application](#Mobile-Application)
 ## Outcome
 This project outcomes includes a single mobile application with crop disease detection, crop monitoring and farming recommendations.
 * Farmer can take a picture of unhealthy leaf and app would detect the disease of the leaf.
@@ -144,3 +146,26 @@ The below figures shows the schematic diagrams of the Transmitter and Receiver
 side respectively.
 ![Transmitter](images/all.png)
 ![Receiver](images/lora.png)
+### Recommendation
+This [link](https://github.com/7NNS7/Recommendation-System-for-Farming) should provide the necessary code and info.
+### Mobile Application
+Partial flowchart of the application built is shown below.
+![Flowchart](images/app.png)
+Below are the snapshots of different pages in application.
+![Login](images/app1.png)
+![Home Page](images/app2.png)
+![Weather](images/app3.png)
+![Monitoring](images/app4.png)
+![Detection](images/app5.png)
+## Conclusion
+The aim of the project is to provide farmers with an end-to-end system that can bolster
+the crop productivity. The end-to-end system includes both crop monitoring system and
+crop diagnosis system integrated in a single mobile application. Thus, the farmer can
+rely on this mobile application for everything related to his field. We used various sensors to gather important information on factors that affect productivity. All these sensors
+are integrated with the Arduino Uno and this Arduino is again connected to LoRa transmitter. The LoRa transmitter sends the sensor data to the LoRa receiver. Single LoRa
+receiver is capable to receiving the data from multiple transmitter thus saving equipment and in turn decreasing cost of the system. The LoRa receiver sends the data to
+ESP8266 which sends the data to the server. This server is connected to the mobile application, thus showing the live sensor data. On the crop diagnosis side, Convolutional
+Neural Networks are used in order to train a model that can detect diseases from the leaf
+image. The model is trained with help of a huge leaf images database. The model is
+stored in a .h5 file and this file is uploaded into the mobile application. Thus the single
+application provides both crop monitoring and crop diagnosis.
