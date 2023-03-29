@@ -1,5 +1,5 @@
 # Crop_Diagnosis_and_Monitoring_Application
-![Demo](demo.gif)
+![Demo](demo.gif#center)
 ## Table of Contents
 1. [Outcome](#outcome)
 2. [Motivation](#motivation)
